@@ -1,0 +1,63 @@
+div.main-body{
+    display: grid;
+    grid-template-columns: minmax(200px, auto) 1fr;
+    grid-template-areas: "header header2";
+    grid-gap: 20px;
+}
+nav#nav-bar{
+    grid-area: header;
+    position: fixed;
+}
+nav#nav-bar a{
+    display: block;
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    padding: 5px;
+    margin: 10px 0;
+
+}
+main#main-doc{
+    grid-area: header2;
+
+}
+header{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#introduction{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#what_you_should_already_know{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#javascript_and_java{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#Hello_world{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#variables{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+code{
+    background-color: #ccc;
+    padding: 20px;
+    display: block;
+}
+
+@media screen and (max-width:750px){
+    main#main-body{
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "header2";
+        
+    }
+    nav#nav-bar{
+        position: inherit;
+    }
+}
